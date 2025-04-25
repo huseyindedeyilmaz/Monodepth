@@ -4,8 +4,8 @@ import torch.nn.functional as F
 
 
 class MonodepthLoss(nn.modules.Module):
-    def _init_(self, n=4, SSIM_w=0.85, disp_gradient_w=1.0, lr_w=1.0):
-        super(MonodepthLoss, self)._init_()
+    def __init__(self, n=4, SSIM_w=0.85, disp_gradient_w=1.0, lr_w=1.0):
+        super(MonodepthLoss, self).__init__()
         self.SSIM_w = SSIM_w
         self.disp_gradient_w = disp_gradient_w
         self.lr_w = lr_w
